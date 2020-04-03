@@ -18,7 +18,7 @@ class Collapsible extends React.Component {
 
     collapse() {
         this.setState({
-                theme:"",
+                theme:this.state.theme,
         })
     }
     render() {
@@ -27,9 +27,9 @@ class Collapsible extends React.Component {
           });
         return( 
         
-            <li onClick= {this.collapse}>
-              <div className="collapsible-header">First<i className="material-icons">keyboard_arrow_down</i></div>
-              <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <li onClick= {this.collapse} className={this.state.theme}>
+              <div className="collapsible-header">{this.props.data.question}<i className="material-icons">keyboard_arrow_down</i></div>
+              <div className="collapsible-body"><span>{this.props.data.answer}</span></div>
             </li>
             
         )
