@@ -23,7 +23,7 @@
   overflow: hidden;
   max-height: 0px;
   background-color: #e6e1e1;
-  transition: max-height 0.5s;
+  transition: max-height 0.4s;
 }
 
 .text {
