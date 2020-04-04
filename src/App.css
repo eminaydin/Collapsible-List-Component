@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
-    background-color: #e0e9f3;
 }
 .collapse {
     width: 50%;

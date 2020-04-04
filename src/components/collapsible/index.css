@@ -16,25 +16,18 @@
   width: 100%;
   border: none;
   text-align: left;
-
   font-size: 20px;
 }
-
-.active,
-.collapsible:hover {
-  background-color: #555;
-}
-
 .content {
-  padding: 0 18px;
+  padding: 0 20px;
   overflow: hidden;
   height: 0px;
   background-color: #e6e1e1;
-  transition: height 0.5s;
+  transition: height 0.4s;
 }
 
 .text {
-  height: 200px;
+  height: 230px;
 }
 li {
   list-style: none;
@@ -51,4 +44,8 @@ i {
   transform: rotate(180deg);
   transition: 0.5s;
   color: grey;
+}
+
+p {
+    font-size: 20px;
 }
