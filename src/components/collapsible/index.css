@@ -21,13 +21,13 @@
 .content {
   padding: 0 20px;
   overflow: hidden;
-  height: 0px;
+  max-height: 0px;
   background-color: #e6e1e1;
-  transition: height 0.4s;
+  transition: max-height 0.5s;
 }
 
 .text {
-  height: 230px;
+  max-height: 250px;
 }
 li {
   list-style: none;
