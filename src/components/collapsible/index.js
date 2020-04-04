@@ -5,13 +5,15 @@ class Collapsible extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      theme: "gray",
+      theme: "default",
+      open: false,
+      icon: false,
     };
     if (this.props.data.category === "admin") {
-      this.state.theme = "orange";
+      this.state.theme = "admin";
     }
     if (this.props.data.category === "marketing") {
-      this.state.theme = "green";
+      this.state.theme = "marketing";
     }
 
     this.collapse = this.collapse.bind(this);
@@ -20,21 +22,19 @@ class Collapsible extends React.Component {
   collapse() {
     this.setState({
       theme: this.state.theme,
+      open: !this.state.open,
+      icon: !this.state.icon
     });
   }
   render() {
     return (
-      //     <li onClick= {this.collapse} >
-      //     <details className= {this.state.theme}>
-      //     <summary>{this.props.data.question}</summary>
-      //    <p>{this.props.data.answer}</p>
-      //   </details>
-      //   </li>
+     
       <li onClick={this.collapse}>
-        <button type="button" class="collapsible">
-          {this.props.data.question}
+        <button type="button" className={`collapsible ${this.state.theme}`}>
+          {this.props.data.question}  <i className={`material-icons ${this.state.icon ? "icon" : "iconback"}`}>keyboard_arrow_down
+</i>
         </button>
-        <div class="content">
+        <div className={`content ${this.state.open ? "text" : ""}`}>
           <p>
           {this.props.data.answer}
           </p>

@@ -1,33 +1,54 @@
-/* .orange {
-    background-color: orange !important;
+.admin {
+  background-color: #e67676 !important;
 }
-.green {
-    background-color: green;
+.marketing {
+  background-color: #1fab9e !important;
 }
 
-.gray {
-    background-color: gray !important;
-} */
+.default {
+  background-color: #262b28b5 !important;
+}
 
 .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  .active, .collapsible:hover {
-    background-color: #555;
-  }
-  
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+
+  font-size: 20px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  overflow: hidden;
+  height: 0px;
+  background-color: #e6e1e1;
+  transition: height 0.5s;
+}
+
+.text {
+  height: 200px;
+}
+li {
+  list-style: none;
+  margin: 20px;
+}
+
+i {
+  float: right;
+}
+.icon {
+  transition: transform 0.5s;
+}
+.iconback {
+  transform: rotate(180deg);
+  transition: 0.5s;
+  color: grey;
+}

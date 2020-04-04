@@ -4,7 +4,8 @@
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    background-color: #e0e9f3;
 }
-.collapsible{
-    width: 700px;
+.collapse {
+    width: 50%;
 }
