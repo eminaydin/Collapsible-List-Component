@@ -1,49 +1,47 @@
 import React from "react";
 import "./index.css";
-import "materialize-css/dist/css/materialize.min.css"
-import M from "materialize-css" 
-
 
 class Collapsible extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            theme: "gray",
-        }
-       if (this.props.data.category === "admin"){this.state.theme = "orange"};
-       if (this.props.data.category === "marketing"){this.state.theme = "green"};
-        
-        this.collapse = this.collapse.bind(this);
+  constructor(props) {
+    super(props);
+    this.state = {
+      theme: "gray",
+    };
+    if (this.props.data.category === "admin") {
+      this.state.theme = "orange";
+    }
+    if (this.props.data.category === "marketing") {
+      this.state.theme = "green";
     }
 
-    collapse() {
-        this.setState({
-                theme:this.state.theme,
-        })
-    }
-    render() {
-        document.addEventListener('DOMContentLoaded', function() {
-            var instances = M.Collapsible.init(document.querySelectorAll('.collapsible'));
-          });
-        return( 
-        
-            <li onClick= {this.collapse}>
-              <div className={`${this.state.theme} collapsible-header`}><span>{this.props.data.question} </span><i className="material-icons">keyboard_arrow_down</i></div>
-              <div className="collapsible-body"><span className="">{this.props.data.answer}</span></div>
-            </li>
-            
-        )
-        
-        }
+    this.collapse = this.collapse.bind(this);
+  }
+
+  collapse() {
+    this.setState({
+      theme: this.state.theme,
+    });
+  }
+  render() {
+    return (
+      //     <li onClick= {this.collapse} >
+      //     <details className= {this.state.theme}>
+      //     <summary>{this.props.data.question}</summary>
+      //    <p>{this.props.data.answer}</p>
+      //   </details>
+      //   </li>
+      <li onClick={this.collapse}>
+        <button type="button" class="collapsible">
+          {this.props.data.question}
+        </button>
+        <div class="content">
+          <p>
+          {this.props.data.answer}
+          </p>
+        </div>
+      </li>
+    );
+  }
 }
 
 export default Collapsible;
-
-
-
-
-
-
-
-
- 
