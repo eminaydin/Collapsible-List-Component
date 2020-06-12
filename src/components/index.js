@@ -27,16 +27,18 @@ class Collapsible extends React.Component {
     });
   }
   render() {
+    let answer = this.props.data.answer;
+    let question = this.props.data.question
     return (
-     
+
       <li onClick={this.collapse}>
         <button type="button" className={`collapsible ${this.state.theme}`}>
-          {this.props.data.question}  <i className={`material-icons ${this.state.icon ? "icon" : "iconback"}`}>keyboard_arrow_down
+          {question}  <i className={`material-icons ${this.state.icon ? "icon" : "iconback"}`}>keyboard_arrow_down
 </i>
         </button>
         <div className={`content ${this.state.open ? "text" : ""}`}>
           <p>
-          {this.props.data.answer}
+            {answer}
           </p>
         </div>
       </li>
