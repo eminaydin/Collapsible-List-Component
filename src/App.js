@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Collapsible from "./components/index";
-import data from "./components/collapsible/data.json"
+import data from "./components/data.json"
 
 function App() {
   return (
