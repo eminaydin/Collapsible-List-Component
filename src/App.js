@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './components/index.css';
 import Collapsible from "./components/index";
 import data from "./components/data.json"
 
@@ -11,9 +11,7 @@ function App() {
         {data.map(data => {
           return <Collapsible data={data} key={data.id} />
         })}
-
       </ul>
-
     </div>
   );
 }

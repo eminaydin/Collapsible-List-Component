@@ -27,8 +27,9 @@
 }
 
 .text {
-  max-height: 250px;
+  max-height: 380px;
 }
+
 li {
   list-style: none;
   margin: 20px;
@@ -47,5 +48,24 @@ i {
 }
 
 p {
-    font-size: 20px;
+  font-size: 20px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+}
+.collapse {
+  width: 50%;
+}
+@media only screen and (max-width: 1024px) {
+  .collapse {
+    width: 90%;
+    padding-left: 0px;
+  }
+  .text {
+    max-height: 1000px;
+  }
 }
